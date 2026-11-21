@@ -6,3 +6,4 @@ for i in range(1, 5): # i adalah variabel dan 5 adalah jumlah iterasi
 
 for a in (5):
     print(f"round {i}")
+    
