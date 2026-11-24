@@ -29,7 +29,7 @@ while True:
     except ValueError:
         print("masukkan angka!")
         continue
-    
+
     if 1 <= operasi <= 3:
         break
     else:
