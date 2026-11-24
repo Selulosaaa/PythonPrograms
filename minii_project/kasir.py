@@ -11,8 +11,12 @@ total = []
 
 while True:
     int_barang = input("input barang belanjaan! ")
-    int_jumlah = int(input("input jumlah barang "))
-    int_harga = int(input("input harga barang "))
+    try:
+        int_jumlah = int(input("input jumlah barang "))
+        int_harga = int(input("input harga barang "))
+    except ValueError:
+        print("masukkan angka yang valid!")
+        continue
 
 
     #Penambahan list
