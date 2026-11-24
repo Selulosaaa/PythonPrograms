@@ -23,7 +23,21 @@ print("MASUKKAN OPERASIMU!")
 print("1. pertambahan")
 print("2. pengurangan")
 print("3. perkalian")
-operasi = int(input("masukkan angka sesuai operasi yang diinginkan(1/2/3) "))
+while True:
+    try:
+        operasi = int(input("angka sesuai operasi yang diinginkan(1/2/3) "))
+    except ValueError:
+        print("masukkan angka!")
+        continue
+    
+    if 1 <= operasi <= 3:
+        break
+    else:
+        print("input operasi tidak valid")
+        continue
+
+
+
 
 if operasi == 1:
     for angka in list_angka:
@@ -36,6 +50,5 @@ elif operasi == 3:
     hasil = hasil_2
     for angka in list_angka:
         hasil *= angka
-else:
-    print("tidak ada input yang valid!")
+
 print(f"hasil perhitunganmu adalah {hasil}")
